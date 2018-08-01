@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	margin: 0;
+	text-decoration: none;
+}
+
+input, button {
+	&:focus {
+		outline: none;
+	}
+}
+
+img {
+	max-width: 100%;
+	border: none;
+}

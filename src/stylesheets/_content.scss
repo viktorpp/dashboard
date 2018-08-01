@@ -1,0 +1,266 @@
+.dashboard {
+	max-width: 1200px;
+	width: 100%;
+
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 30px;
+	}
+
+	&__item {
+		padding-left: 25px;
+		border: none;
+	}
+}
+
+.content__head {
+	padding: 21px 0 25px;
+}
+
+.notification {
+	position: relative;
+	&:after {
+		content: "2";
+		text-align: center;
+		line-height: 1.6;
+		position: absolute;
+		top: -6px;
+		right: -8px;
+		width: 17px;
+		height: 17px;
+		border-radius: 100%;
+		display: block;
+		margin: 0 auto;
+		font-weight: 700;
+		font-size: 10px;
+		background-color: #1DCE6C;
+		color: $text-color-primery
+	}
+}
+
+.content {
+	font-family: $font-primery;
+	background-color: $bg-content;
+	padding: 0 30px;
+	@include sm-block() {
+		padding: 0 10px;
+	}
+
+	&__wrap {
+		width: 100%;
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	&__top {
+		padding-top: 66px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include w_630-block() {
+			padding-top: 30px;
+		}
+	}
+}
+
+.username {
+	padding-top: 7px;
+	font-weight: 700;
+	font-size: 24px;
+	color: $content-top-color;
+	@include w_630-block() {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.button {
+	width: 154px;
+	height: 40px;
+	border: none;
+	background: transparent;
+	border: 1px solid $content-top-color;
+	border-radius: 4px;
+	color: $content-top-color;
+	font-size: 14px;
+	outline:0;
+	cursor: pointer;
+	@include w_630-block() {
+		margin-top: 10px;
+		width: 100%;
+		height: 40px;
+	}
+	&:hover {
+		background: linear-gradient(180deg, #53CD72 0%, #1CAF5E 100%);
+		color:$text-color-primery;
+	}
+}
+
+.tabs {
+	margin-top: 20px;
+	display: flex;
+	font-size: 16px;
+	@include w_600-block() {
+		justify-content: center;
+	}
+
+	&__tab {
+		margin-right: 36px;
+		padding-bottom: 8px;
+		cursor: pointer;
+		@include w_600-block() {
+			margin-right: 15px;
+		}
+		
+		&:hover {
+			border-bottom: 4px solid #d8e986;
+		}
+		&_active {
+			border-bottom: 4px solid #d8e986;
+		}
+	}
+}
+
+.items {
+	padding-bottom: 131px;
+	color: $text-color-primery;
+	@include row-flex();
+	@include lg-block() {
+		margin: 0 auto;
+		justify-content: center;
+	}
+	@include sm-block() {
+		padding-bottom: 50px;
+	}
+}
+
+.item {
+	@include col();
+	@include size(3);
+	margin-top: 25px;
+	@include size-xl(4);
+	@include size-lg(5);
+	@include size-w_900(6);
+	@include size-md(8);
+	@include size-w_700(10);
+	@include size-w_600(12);
+
+}
+
+.social-box {
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.social-icon {
+	padding-top: 20px;
+	img {
+		display: block;
+	}
+}
+
+.social-count {
+	margin-top: 34px;
+}
+
+.social-text {
+	margin-top: 6px;
+}
+
+.facebook  {
+	background: linear-gradient(180deg, #39579A 0%, #2C4479 97.23%), #39579A;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+
+}
+
+.twitter {
+	background: linear-gradient(180deg, #059FF5 0%, #059FC3 100%), #059FF5;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+}
+
+.instagram {
+	background: url(../images/content/bg-social-2.svg) center no-repeat;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+	background-size: 120%;
+}
+
+.linkedin {
+	background: linear-gradient(180deg, #007EBB 0%, #007E9D 98.51%), #007EBB;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+
+}
+
+.youtube {
+	background: linear-gradient(180deg, #CE1312 0%, #B01312 100%), #CE1312;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+
+}
+
+.snapchat {
+	background: linear-gradient(180deg, #FFFE00 0%, #F3F200 96.43%), #FFFE00;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+	padding-bottom: 32px;
+	color: #000000;
+}
+
+.google {
+	background: linear-gradient(180deg, #F93F2D 0%, #C73F2D 100%), #F93F2D;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+	padding-bottom: 32px;
+}
+
+.vine {
+	background: linear-gradient(180deg, #00B687 0%, #008E87 100%), #00B687;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+	padding-bottom: 32px;
+}
+
+.social-count {
+	font-weight: 700;
+	font-size: 37px;
+}
+
+.social-text {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 9px;
+	letter-spacing: 2px;
+}
+.social-stats {
+	margin-top: 22px;
+	text-align: right;
+	padding-bottom: 11px;
+	font-size: 26px;
+}
+
+.username-block {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	color: $content-color;
+}
+
+.username__foto {
+	margin-right: 10px;
+	img {
+		display: block;
+	}
+}
+
+.social-network {
+	opacity: 0.50;
+}
+
+.social-username {
+	word-break: break-all;
+}
